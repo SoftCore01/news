@@ -25,6 +25,33 @@ a:any-link {
   text-decoration: none;
 }
 
+h1 {
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+
+p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5rem;
+}
+
+button {
+  margin: 5vh 0;
+  width: 150px;
+  height: 40px;
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  border: none;
+  padding: 0 10px;
+  background-color: hsl(5, 85%, 63%);
+  letter-spacing: 0.1rem;
+}
+button:hover, button:focus {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  cursor: pointer;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -34,7 +61,7 @@ header {
 }
 
 .mobile-nav {
-  display: flex;
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 0;
@@ -63,6 +90,7 @@ header {
 main {
   padding: 0 5vw 10vh;
   display: grid;
+  gap: 20px;
 }
 
 .desktop-nav {
@@ -73,7 +101,104 @@ main {
   display: none;
 }
 
-@media screen {
+.stories {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: minmax(130px, 250px);
+  gap: 10px;
+}
+.stories h3 {
+  color: hsl(5, 85%, 63%);
+  font-size: 2rem;
+}
+.stories a {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.stories a:hover {
+  color: hsl(5, 85%, 63%);
+}
+.stories img {
+  height: 100%;
+  width: 100%;
+}
+.stories .info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.new {
+  background-color: hsl(240, 100%, 5%);
+  padding: 5vh 5vw;
+}
+.new h2 {
+  color: hsl(35, 77%, 62%);
+}
+.new article {
+  margin: 30px 0;
+}
+.new a {
+  color: hsl(36, 100%, 99%);
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.new a:hover {
+  color: hsl(35, 77%, 62%);
+}
+.new p {
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 5vh 7vw;
+  }
+  .new {
+    padding: 5vh 2vw 0;
+  }
+  main {
+    padding: 0 7vw 10vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px repeat(2, 1fr);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .img-contain {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  h1 {
+    font-size: 3rem;
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  .read-more {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  .new {
+    grid-row: 1/3;
+  }
+  .menu-div {
+    display: none;
+  }
+  .desktop-nav {
+    display: flex;
+    gap: 20px;
+  }
+  .desktop-nav a {
+    color: hsl(236, 13%, 42%);
+    font-weight: 400;
+  }
+  .desktop-nav a:hover {
+    color: hsl(5, 85%, 63%);
+  }
   .desktop {
     display: block;
   }
