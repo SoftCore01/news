@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* PRIMARY */
+/* NEUTRAL */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:-moz-any-link {
+  text-decoration: none;
+}
+
+a,
+a:any-link {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5vh 5vw;
+  position: relative;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5vh 5vw;
+  background-color: hsl(36, 100%, 99%);
+  width: 70vw;
+  height: 100vh;
+  gap: 15px;
+  box-shadow: -124px 3px 108px 6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -124px 3px 108px 6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -124px 3px 108px 6px rgba(0, 0, 0, 0.75);
+}
+.mobile-nav a {
+  color: hsl(240, 100%, 5%);
+  font-weight: 400;
+}
+.mobile-nav a:hover {
+  color: hsl(236, 13%, 42%);
+}
+.mobile-nav .close-div {
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+main {
+  padding: 0 5vw 10vh;
+  display: grid;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+@media screen {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
